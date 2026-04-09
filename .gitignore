@@ -1,0 +1,74 @@
+# ============================================================
+# Personal Health Graph — .gitignore
+# ============================================================
+# This file prevents accidental commits of personal health data.
+# Template files (_TEMPLATE.md) and README files are tracked.
+# User-created data files (dated entries, filled-in profiles) are not.
+# ============================================================
+
+# ----- Personal data files (NEVER commit these) -----
+
+# Filled-in state files (contain personal health information)
+# These are tracked as blank templates but should not be committed
+# once they contain real data. If you're using this repo as your
+# working copy (not recommended), uncomment these lines:
+# PROFILE.md
+# SUPPLEMENTS.md
+# PROTOCOLS.md
+# DOCTOR_QS.md
+# EXPENSES.md
+# LABS_HISTORY.md
+# GENETICS.md
+
+# Inbox (unprocessed files awaiting intake)
+inbox/*
+!inbox/README.md
+
+# Dated log entries (symptoms, journal)
+symptoms/[0-9]*.md
+journal/[0-9]*.md
+
+# Dated integration files (labs, wearables, genetics, etc.)
+# Ignore everything in these dirs, then un-ignore README and _TEMPLATE
+integrations/labs/*.md
+integrations/genetics/*.md
+integrations/wearable_daily/*.md
+integrations/healthkit/*.md
+integrations/microbiome/*.md
+integrations/imaging/*.md
+integrations/assessments/*.md
+integrations/cycle/*.md
+!integrations/*/README.md
+!integrations/*/_TEMPLATE.md
+
+# Raw data exports (often large, always personal)
+integrations/raw/**/*.pdf
+integrations/raw/**/*.csv
+integrations/raw/**/*.json
+integrations/raw/**/*.txt
+integrations/raw/**/*.vcf
+integrations/raw/**/*.bam
+integrations/raw/**/*.gz
+integrations/raw/**/*.zip
+
+# Generated reports (contain personal analysis)
+# All report files are ignored except the README
+reports/*
+!reports/README.md
+
+# ----- OS and editor files -----
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# ----- Environment and secrets -----
+.env
+.env.local
+*.key
+*.pem
+# Personal reference docs (not part of the public template)
+GITHUB_SETUP_GUIDE.md
