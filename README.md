@@ -117,6 +117,17 @@ Create a new Project in Claude. Add your Personal Health Graph files as project 
 ### Claude (Claude Code / Cowork)
 Point Claude Code at the folder, or select it in Cowork. Claude can read, cross-reference, and analyze all files directly. Skills run natively.
 
+### Claude (CLI)
+From this folder, launch Claude in your terminal and run skills by name.
+
+```bash
+claude
+```
+
+Then, in the Claude prompt:
+
+- Run a skill: `/intake` (or any file in `skills/`)
+
 ### ChatGPT
 Upload your key files (PROFILE.md, SUPPLEMENTS.md, LABS_HISTORY.md, GENETICS.md) to a conversation or a Custom GPT. Paste a skill file to run analysis.
 
