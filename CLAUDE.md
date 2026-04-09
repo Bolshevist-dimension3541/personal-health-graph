@@ -32,6 +32,16 @@ Skills are in `skills/*.md` and `skills/workflows/*.md`. To run a skill, read th
 - `skills/workflows/PHYSICIAN_REPORT.md` — PHG analysis → formal physician report
 - `skills/workflows/RESEARCH_ENRICHMENT.md` — validate findings via PubMed/Consensus
 
+### Slash commands (Claude CLI users)
+
+If you're using Claude in the terminal from this folder, every skill is available as a slash command. The commands live in `.claude/commands/*.md` and are **thin wrappers** — each command file contains only a short pointer that tells Claude to read and execute the canonical skill file in `skills/`. This means:
+
+- Running `/intake` is equivalent to reading `skills/INTAKE.md` and executing it
+- Running `/health_memo` is equivalent to reading `skills/HEALTH_MEMO.md` and executing it
+- Running `/physician_report` is equivalent to reading `skills/workflows/PHYSICIAN_REPORT.md` and executing it
+
+**Single source of truth:** the canonical methodology always lives in `skills/`. Slash command files are pointers, never copies. When a skill is updated, the wrapper does not need to change.
+
 ### File modification rules
 
 **State files** (`PROFILE.md`, `SUPPLEMENTS.md`, `PROTOCOLS.md`, `DOCTOR_QS.md`, `EXPENSES.md`, `LABS_HISTORY.md`, `GENETICS.md`) — modify in place. They represent current truth.
@@ -81,5 +91,7 @@ Files reference each other via relative file paths in `Linked files:` sections o
 ## Contributing
 
 When adding a new skill, follow the established frontmatter format from `SCHEMA.md` — it must include `reads:`, `output_format:`, and an honest `## Important notes` or limitations section. Skills must be AI-agnostic (work with Claude, GPT-4, Gemini). See `CONTRIBUTING.md` for full guidelines.
+
+**If you add a new skill**, also add a matching thin wrapper in `.claude/commands/` so Claude CLI users get a slash command for it. The wrapper should be a short pointer file (see existing wrappers for the pattern) — never a duplicate of the skill content.
 
 Never commit real personal health data. The `.gitignore` is configured to protect dated log entries, filled-in profiles, and generated reports, but always verify with `git status` before pushing.
